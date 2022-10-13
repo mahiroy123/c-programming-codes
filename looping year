@@ -1,0 +1,55 @@
+#include<stdio.h>
+struct address 
+{ 
+int d_no; 
+char street[20]; 
+char town[20]; 
+}; 
+struct address add[10]; 
+struct Employee 
+{ 
+ int id,hours;
+char name[20]; 
+float pay,salary; 
+struct address add[10]; 
+}; 
+struct Employee data[20];
+int main() 
+{
+ int i;
+ for(i=0;i<3;i++) 
+ { 
+ printf("enter the id and name :\n");
+ scanf("%d%s",&data[i].id,&data[i].name);
+ printf("enter the address :\n");
+ scanf("%d%s%s",&data[i].add[i].d_no,&data[i].add[i].street,&data[i].add[i].town);
+ printf("enter the pay :\n");
+ scanf("%f",&data[i].pay);
+ printf("enter the no of working hours :\n");
+ scanf("%d",&data[i].hours); 
+ printf("\n"); 
+ } 
+ float incentive; for(i=0;i<3;i++) 
+ { 
+ if(data[i].hours<=35) 
+ { 
+ incentive=data[i].pay/20; 
+ } 
+ if(36<data[i].hours<45) 
+ { 
+ incentive=data[i].pay/10; 
+ } 
+ if(46<data[i].hours<52) 
+ { 
+ incentive=(data[i].pay/100)*15; 
+ } 
+ data[i].salary=data[i].pay+incentive; 
+ } 
+ for(i=0;i<3;i++) 
+ { 
+ printf("\n %d.\tEmployee ID:%d\tName:%s\n",i+1,data[i].id,data[i].name); 
+ printf("\tDoor no:%d\t Street:%s\t Town:%s\n", 
+data[i].add[i].d_no,data[i].add[i].street,data[i].add[i].town); 
+printf("\npay=%f\tSalary=%f\n",data[i].pay,data[i].salary); 
+ } 
+}
