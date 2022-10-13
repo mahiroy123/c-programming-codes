@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+ float m1,m2,m3,m4,total;
+ float agg;
+ printf("Enter marks in python:");
+ scanf("%f",&m1);
+ printf("Enter marks in c programming:");
+ scanf("%f",&m2);
+ printf("Enter marks in mathematics:");
+ scanf("%f",&m3);
+ printf("Enter marks in physics:");
+ scanf("%f",&m4);
+ if(m1<0 || m2<0 || m3<0 || m4<0)
+ {
+ printf("Enter valid marks");
+ }
+ else
+ {
+ total=m1+m2+m3+m4;
+ agg=total/4;
+ printf("total:%.1f\n",total);
+ printf("aggregate:%.1f\n",agg);
+ if(agg>=75)
+ {
+ printf("DISTINCTION");
+ }
+ else if(75>agg && agg>=60)
+ {
+ printf("FIRST DIVISION");
+ }
+ else if(60>agg && agg>=50)
+ {
+ printf("SECOND DIVISION");
+ }
+ else if(75>agg && agg>=60)
+ {
+ printf("THIRD DIVISION");
+ }
+ else
+ printf("Fail");
+ } }
