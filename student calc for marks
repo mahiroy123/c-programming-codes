@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+ int total,staff;
+ printf("Total users:");
+ scanf("%d",&total);
+ printf("Staff users:");
+ scanf("%d",&staff);
+ if(total==staff)
+ {
+ printf("student users=0");
+ }
+ else if(total<staff)
+ {
+ printf("invalid input");
+ }
+ if(total>staff)
+ {
+ printf("Student users:%d",total-(staff/3)-staff);
+ }
+}
